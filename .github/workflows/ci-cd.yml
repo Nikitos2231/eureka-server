@@ -23,9 +23,9 @@ jobs:
         env:
           GIT_USERNAME: ${{ secrets.GIT_USERNAME }}
           GIT_PASSWORD: ${{ secrets.GIT_PASSWORD }}
-        run: docker build \
-          --build-arg GIT_USERNAME=${GIT_USERNAME} \
-          --build-arg GIT_PASSWORD=${GIT_PASSWORD} \
+        run: docker build 
+          --build-arg GIT_USERNAME=${GIT_USERNAME} 
+          --build-arg GIT_PASSWORD=${GIT_PASSWORD} 
           -t sythilearn/eureka-server .
 
       - name: Push Docker image to Docker Hub
